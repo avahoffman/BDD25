@@ -1,6 +1,7 @@
-# Baltimore Data Day 2024
+# Baltimore Data Day 2025
 
-This repo contains an Intro to R and a Tidycensus exploration activity.
+This repo contains an Intro to R activity.
 
-This content was created by [Dexter Locke](https://github.com/DHLocke) and [Ava Hoffman](https://github.com/avahoffman) for [Baltimore Data Day 2024](https://bniajfi.org/data_day/).
+This content was created by [Ava Hoffman](https://github.com/avahoffman) for [Baltimore Data Day 2025](https://bniajfi.org/data_day/).
 
+Currently this is a placeholder from last year.
