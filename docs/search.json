@@ -1,0 +1,170 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Baltimore Data Day 2024",
+    "section": "",
+    "text": "This activity is meant to guide you through some R fundamentals so you can get started on your data journey!"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "This content was created by Dexter Locke and Ava Hoffman for Baltimore Data Day 2024.\nYou can find the source files for this Workshop at https://github.com/avahoffman/BDD24."
+  },
+  {
+    "objectID": "resources.html",
+    "href": "resources.html",
+    "title": "Resources",
+    "section": "",
+    "text": "R reference card\nR introductory guide\nR jargon\nR terminology\nWhat is the Tidyverse/what packages are in it?\nWhere do package names come from?\nLawlor et al. 2022: Ten simple rules for teaching yourself R"
+  },
+  {
+    "objectID": "resources.html#getting-started",
+    "href": "resources.html#getting-started",
+    "title": "Resources",
+    "section": "",
+    "text": "R reference card\nR introductory guide\nR jargon\nR terminology\nWhat is the Tidyverse/what packages are in it?\nWhere do package names come from?\nLawlor et al. 2022: Ten simple rules for teaching yourself R"
+  },
+  {
+    "objectID": "resources.html#troubleshooting-guides",
+    "href": "resources.html#troubleshooting-guides",
+    "title": "Resources",
+    "section": "Troubleshooting guides",
+    "text": "Troubleshooting guides\n\nGuide on when to use quotes or backticks\nGuide on what functions require pull() first"
+  },
+  {
+    "objectID": "resources.html#keyboard-shortcuts",
+    "href": "resources.html#keyboard-shortcuts",
+    "title": "Resources",
+    "section": "Keyboard shortcuts",
+    "text": "Keyboard shortcuts\n\nRStudio shortcuts can be found here."
+  },
+  {
+    "objectID": "resources.html#extra-help",
+    "href": "resources.html#extra-help",
+    "title": "Resources",
+    "section": "Extra help",
+    "text": "Extra help\n\nData importing\n\nVideo on data import\nVideo for PC users who want to see how to move files around (especially from downloads)\nVideo for Mac users who want to see how to move files around (especially from downloads)\nExtra information about file paths\n\n\n\nJoining datasets\n\nfull-join() animation\ninner_join() animation\nleft-join() animation\nright-join() animation\n\n\n\nPlotting data\n\nggplot2 gallery - See what is possible with ggplot2 to create graphs in R\nggplot2 theme cheatsheet\nVisualization best practices\nGuide on when to use which plot\nGuide to building up a ggplot2 figure\n\n\n\nStatistics\n\nGuide on when to use what stats test\nModeling 101\nCommon statistical tests are linear models (why understanding linear models will get you far!)\nInterpreting GLM output (e.g., deviance)"
+  },
+  {
+    "objectID": "resources.html#courses-conferences",
+    "href": "resources.html#courses-conferences",
+    "title": "Resources",
+    "section": "Courses & Conferences",
+    "text": "Courses & Conferences\n\nOnline Courses and Resources\n\nTidyverse Skills for Data Science Book (a great next step to learn more about the tidyverse, some modeling, and machine learning)\nTidyverse Skills for Data Science Course (same content with quizzes, can get certificate with $)\nOpen Case Studies\n(resource for specific public health cases with statistical implementation and interpretation - a great next step for learning more about stats and wrangling!)\nR for Data Science (great general information)\nR for Applied Epidemiology (Similar general introductory course)\n\nR basics chapter of Introduction to Data Science by Rafael A. Irizarry(great general information)\nDataquest (general interactive resource)\nQuick R Guide (nice free general resource)\nIntroduction to Reproducibility\nAdvanced Reproducibility\n\n\n\nR Conferences\n\nThe RStudio/Posit conference has lots of useful workshops!\nuseR! — International R User Conference information can be found here."
+  },
+  {
+    "objectID": "resources.html#r-for-stata-spss-and-sas-files",
+    "href": "resources.html#r-for-stata-spss-and-sas-files",
+    "title": "Resources",
+    "section": "R for Stata, SPSS, and SAS files",
+    "text": "R for Stata, SPSS, and SAS files\n\nThe Haven package\n(This package is super useful for reading and writing files so that they are compatible across Stata, SPSS, SAS, and R)\nR vs Stata\n(See page 505)\nR &lt;-&gt; SAS Cheatsheet\nSAS to R Converter\n\nYou might also find large language models like ChatGPT useful for code conversion. Be sure to check the output because AI makes mistakes!"
+  },
+  {
+    "objectID": "resources.html#videos-of-online-lectures",
+    "href": "resources.html#videos-of-online-lectures",
+    "title": "Resources",
+    "section": "Videos of Online Lectures",
+    "text": "Videos of Online Lectures\n\nJHU Summer Institute 2023\n\n\n\n\nDay\nLink to Video\n\n\n\n\nIntroduction\nhttps://youtu.be/aIJrFKQYnP8\n\n\nRStudio\nhttps://youtu.be/cxHVf5rTK1c\n\n\nReproducibility\nhttps://youtu.be/af9B9-_df1o\n\n\nBasic R\nhttps://youtu.be/5io-iZDutH8\n\n\nData Input\nhttps://youtu.be/sllVVRD5YE4\n\n\nSubsetting Data\nhttps://youtu.be/dWdK3bnAGm8\n\n\nData Classes\nhttps://youtu.be/Q4ubnU35TUs\n\n\nData Summarization\nhttps://youtu.be/xsI30yCGgTQ\n\n\nData Cleaning\nhttps://youtu.be/qL6_yfiR9Jk\n\n\nData Manipulation\nhttps://youtu.be/fQ7lDp8Svw0\n\n\nIntro to Data Visualization\nhttps://youtu.be/D5RdNwadtR0\n\n\nData Visualization\nhttps://youtu.be/fKj1iBxLwyk\n\n\nFactors\nhttps://youtu.be/yqU5zHVh-qA\n\n\nStatistics\nhttps://youtu.be/T9Oh0miYhZ0\n\n\nData Output\nhttps://youtu.be/x2OuR4JhPLY\n\n\nFunctions\nhttps://youtu.be/jWv5RSXq5mo\n\n\n\n\n\n\n\n\nJHU Summer Institute 2022\n\n\n\n\nDay\nLink to Video\n\n\n\n\nRStudio and Reproducibility\nhttps://www.youtube.com/watch?v=eCsD0f0q6rY&t=9s\n\n\nBasic R\nhttps://www.youtube.com/watch?v=2YRgDG3qsho\n\n\nData IO\nhttps://www.youtube.com/watch?v=ejnBAdA2N1c\n\n\nSubsetting Data\nhttps://www.youtube.com/watch?v=GFa6dXAezJg\n\n\nData Summarization\nhttps://www.youtube.com/watch?v=kj_69maSANk\n\n\nData Classes\nhttps://www.youtube.com/watch?v=zoVciFJieLY&t=21s\n\n\nData Cleaning\nhttps://www.youtube.com/watch?v=GhK8xMUBNwg\n\n\nData Manipulation\nhttps://www.youtube.com/watch?v=qP73AWUjfAU\n\n\nIntro to Data Visualization\nhttps://www.youtube.com/watch?v=OCVo6vWrKL4\n\n\nData Visualization\nhttps://www.youtube.com/watch?v=9UPlZqOfT_s\n\n\nFactors\nhttps://www.youtube.com/watch?v=0fE756trEEE\n\n\nStatistics\nhttps://www.youtube.com/watch?v=jZ5sskAdAJU&t=4s\n\n\nFunctions\nhttps://www.youtube.com/watch?v=dx-85RzN1G0"
+  },
+  {
+    "objectID": "index.html#installing-r-and-rstudio",
+    "href": "index.html#installing-r-and-rstudio",
+    "title": "Baltimore Data Day 2024",
+    "section": "Installing R and RStudio",
+    "text": "Installing R and RStudio\nYou will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features.\n\nDownload and Install R.\nDownlaod and Install RStudio.\n\nIf you work on a Windows machine, you might also need to install R Tools."
+  },
+  {
+    "objectID": "index.html#navigate-rstudio",
+    "href": "index.html#navigate-rstudio",
+    "title": "Baltimore Data Day 2024",
+    "section": "Navigate RStudio",
+    "text": "Navigate RStudio\nLocate the following in RStudio:\n\nConsole. This is where code is run.\nEnvironment. This shows you objects R can work with.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRead more about the RStudio user interface here."
+  },
+  {
+    "objectID": "index.html#r-markdown",
+    "href": "index.html#r-markdown",
+    "title": "Baltimore Data Day 2024",
+    "section": "R Markdown",
+    "text": "R Markdown\nThis is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see http://rmarkdown.rstudio.com.\nWhen you click the Knit button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:\n\nsummary(cars)\n\n     speed           dist       \n Min.   : 4.0   Min.   :  2.00  \n 1st Qu.:12.0   1st Qu.: 26.00  \n Median :15.0   Median : 36.00  \n Mean   :15.4   Mean   : 42.98  \n 3rd Qu.:19.0   3rd Qu.: 56.00  \n Max.   :25.0   Max.   :120.00"
+  },
+  {
+    "objectID": "index.html#including-plots",
+    "href": "index.html#including-plots",
+    "title": "Baltimore Data Day 2024",
+    "section": "Including Plots",
+    "text": "Including Plots\nYou can also embed plots, for example:\n\n\n\n\n\n\n\n\n\nNote that the echo = FALSE parameter was added to the code chunk to prevent printing of the R code that generated the plot."
+  },
+  {
+    "objectID": "index.html#running-code",
+    "href": "index.html#running-code",
+    "title": "Baltimore Data Day 2024",
+    "section": "Running Code",
+    "text": "Running Code\nTo run code found here, press the green play button to the right of the code, or use the shortcut ctrl+return (Windows) cmd+return (Mac).\nRun the following code, which should equal 2.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#install-tidyverse",
+    "href": "index.html#install-tidyverse",
+    "title": "Baltimore Data Day 2024",
+    "section": "Install tidyverse",
+    "text": "Install tidyverse\nTidyverse is an add-on bundle of software called a “package”. It contains useful “functions” for data analysis.\nYou only need to install tidyverse once per major release of R.\n\n\n\nThe downloaded binary packages are in\n    /var/folders/qz/3lllt6y102gbbbth2vmm_2ch0000gn/T//RtmpT1QO4M/downloaded_packages\n\n\nBut you will need to load it every time you start R.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "BDD.html",
+    "href": "BDD.html",
+    "title": "BDD Intro to R",
+    "section": "",
+    "text": "To run code found here, press the green play button to the right of the code, or use the shortcut ctrl+return (Windows) cmd+return (Mac).\nRun the following code, which should equal 2.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "BDD.html#running-code",
+    "href": "BDD.html#running-code",
+    "title": "BDD Intro to R",
+    "section": "",
+    "text": "To run code found here, press the green play button to the right of the code, or use the shortcut ctrl+return (Windows) cmd+return (Mac).\nRun the following code, which should equal 2.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "BDD.html#install-tidyverse",
+    "href": "BDD.html#install-tidyverse",
+    "title": "BDD Intro to R",
+    "section": "Install tidyverse",
+    "text": "Install tidyverse\nTidyverse is an add-on bundle of software called a “package”. It contains useful “functions” for data analysis.\nYou only need to install tidyverse once per major release of R.\n\n\n\nThe downloaded binary packages are in\n    /var/folders/qz/3lllt6y102gbbbth2vmm_2ch0000gn/T//RtmpRKNElf/downloaded_packages\n\n\nBut you will need to load it every time you start R.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors"
+  },
+  {
+    "objectID": "index.html#organize-your-files",
+    "href": "index.html#organize-your-files",
+    "title": "Baltimore Data Day 2024",
+    "section": "Organize your files",
+    "text": "Organize your files\nWe will create an “R Project” to stay organized. You can create many more later.\n\nGo to File &gt; New Project…\nSelect “New Directory”.\nSelect “New Project”.\nProvide a Directory name, such as “Intro to R”.\nPick a reasonable location, such as your Documents folder."
+  },
+  {
+    "objectID": "index.html#downdload-the-activity",
+    "href": "index.html#downdload-the-activity",
+    "title": "Baltimore Data Day 2024",
+    "section": "Downdload the Activity",
+    "text": "Downdload the Activity\nNow we will transition to the activity, which is actually in the code file itself!\n\nDownload This file.\nDownload this BNIA data about library cards.\nMove the downloaded files to the directory you created above.\nOpen BDD.Rmd in RStudio (File &gt; Open File or simply double-click)."
+  },
+  {
+    "objectID": "index.html#download-the-activity",
+    "href": "index.html#download-the-activity",
+    "title": "Baltimore Data Day 2024",
+    "section": "Download the Activity",
+    "text": "Download the Activity\nNow we will transition to the activity, which is actually in the code file itself!\n\nDownload This file.\nDownload This BNIA data about library cards. (source)\nMove the downloaded files to the directory you created above.\nOpen BDD.Rmd in RStudio (File &gt; Open File or simply double-click)."
+  },
+  {
+    "objectID": "index.html#intro-to-r-activity",
+    "href": "index.html#intro-to-r-activity",
+    "title": "Baltimore Data Day 2024",
+    "section": "Intro to R Activity",
+    "text": "Intro to R Activity\nNow we will transition to the activities, which are actually in the code files!\n\nDownload This file.\nDownload This BNIA data about library cards. (source)\nMove the downloaded files to the directory you created above.\nOpen BDD.Rmd in RStudio (File &gt; Open File or simply double-click)."
+  },
+  {
+    "objectID": "index.html#tidycensus-activity",
+    "href": "index.html#tidycensus-activity",
+    "title": "Baltimore Data Day 2024",
+    "section": "Tidycensus Activity",
+    "text": "Tidycensus Activity\n\nDownload This file.\nMove the downloaded files to the directory you created above.\nOpen start_using_tidycensus.Rmd in RStudio (File &gt; Open File or simply double-click).\nYou will need a free Census API key, this lets your computer communicate with Census. A key can be obtained from http://api.census.gov/data/key_signup.html."
+  }
+]

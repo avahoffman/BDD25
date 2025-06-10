@@ -1,0 +1,243 @@
+---
+title: "start using tidycensus"
+author: "Dexter H Locke, PhD"
+date: "`r format(Sys.time())`"
+output:
+  html_document:
+    code_folding: hide
+    fig_width: 8
+    fig_height: 5
+    fig_caption: true
+    toc: true
+    toc_float: true
+    self_contained: true
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+The purpose of this workshop is to introduce users to tidycensus, a wonderful R package for accessing spatial and a-spatial data from the US Census Bureau - which has been notoriously difficult in the past.
+
+Once sample data are obtained, examples of spatial data handling and elementary spatial data analyses will be provided.
+
+[Helpful links and resources:]{.underline}
+
+**Basic usage of tidycensus:** <https://walker-data.com/tidycensus/articles/basic-usage.html>
+
+**Simple Features for R:** <https://r-spatial.github.io/sf/index.html>
+
+You will need a free Census API key, this lets your computer communicate with Census. A key can be obtained from <http://api.census.gov/data/key_signup.html>.
+
+# 0 load libraries
+
+```{r message=FALSE}
+
+# make a vector of packages to load
+# this is instead of:
+# library(sf)
+# library(tidyverse)
+# etc..
+packs <-c(
+            'sf'         # for spatial data support
+          , 'tidyverse'  # cuz
+          , 'tidylog'    # prints out what was done in dplyr and tidyr
+          , 'tidycensus'# for accessing Census and ACS data
+          , 'mapview'    # quick web maps for zooming and panning around
+          , 'leafsync'  # linked maps
+          )  
+
+# if the packages are not already installed, this installs them
+if (length(setdiff(packs, rownames(installed.packages()))) > 0) {
+install.packages(setdiff(packs, rownames(installed.packages())))
+}
+
+# this actually does the library() call to each item of the "packs" vector
+# and loads the packages
+vapply(packs, library, character.only = TRUE, logical(1), logical.return = TRUE, quietly = TRUE)
+
+# where are we?
+list.files()
+
+
+# mapviewOptions(fgb = FALSE) # fixes mapview (something about new versions.. )
+
+# # setting for get_acs, Census API key
+# census_api_key("YOUR API KEY GOES HERE", install = TRUE, overwrite = TRUE)
+readRenviron("~/.Renviron")
+options(tigris_use_cache = TRUE) # makes tidycensus faster
+
+```
+
+But first, a little background on how Census geographies are organized. Blocks are the basic building blocks. Blocks are aggregated into block groups, block groups are in turn aggregated into tracts.. tracts into counties..
+
+Each block is in one and only one block group. Each block group is in one and only one tract, and so on up the middle of the diagram. The geographies in the middle are the most commonly used, stay in the middle unless you have a good reason to use the geographies on the left or right.
+
+```{r, echo=FALSE}
+# Define variable containing url
+url <- "https://static.socialexplorer.com/pub/help/wp-content/uploads/2013/11/geo_diagram.png"
+```
+
+<center><img src="`r url`"/></center>
+
+# 1 read in data
+
+## A what kind of data are available?
+
+```{r}
+
+v21 <- load_variables(2021, "acs5", cache = TRUE)
+
+# View(v21)
+```
+
+## B get Maryland state boundary
+
+```{r}
+
+
+(MD <-
+  tidycensus::get_acs(
+      geography = 'state'
+    , state = 'MD' # 'Maryland' would also have worked
+    # , variables = 	'B01001_001'
+    , variables = c('pop' = 'B01001_001') # lets you re-name while downloading
+    , year = 2015
+    , geometry = TRUE
+    , output = 'wide'
+    , moe_level = 95
+    ) 
+)
+
+# static map
+MD |> plot()
+
+# dynamic map
+MD |> mapview()
+```
+
+## C get Baltimore City Block groups
+
+```{r}
+
+my_vars <- 
+  c(
+      pop         = 'B02001_001'	# Total:
+    , white       = 'B02001_002'	# White alone
+    , black       = 'B02001_003'	# Black or African American alone
+    , aian        = 'B02001_004'	# American Indian and Alaska Native alone
+    , asian       = 'B02001_005'	# Asian alone
+    , native      = 'B02001_006'	# Native Hawaiian and Other Pacific Islander alone
+    , other       = 'B02001_007'	# Some other race alone
+    , two_or_more = 'B02001_008'	# Two or more races:
+    # 'B02001_009' = ''	    # Two or more races:!!Two races including Some other race
+    # 'B02001_010' = ''	    # Two or more races:!!Two races excluding Some other race, and three or more races
+    )
+
+# double check and examine object type
+my_vars
+my_vars |> names()
+my_vars |> str()
+
+
+# download Baltimore City block groups with selection of race variables
+(BACI <-
+  tidycensus::get_acs(
+      geography = 'block group' # notice we have changed this from 'state'
+    , state = 'Maryland'
+    # , county = 'Baltimore'    # see what happens with this setting
+    , county = 'Baltimore city'
+    , variables = my_vars
+    , year = 2015
+    , geometry = TRUE
+    , output = 'wide'
+    , moe_level = 95
+    ) 
+)
+
+# ending with "E" for Estimate
+# ending with "M" for Margin of Error
+
+# some simple plotting
+BACI |> plot() # first 10 variables
+
+# plot a specific variable (Asian Estimate)
+plot(BACI['asianE'])
+
+# make a ggplot map of two or more races
+ggplot() + 
+  geom_sf(data = BACI, aes(fill = two_or_moreE)) +
+  scale_fill_viridis_c() + 
+  theme_bw(16) +
+  NULL
+
+# dynamic maps of Maryland and population per block group in Baltimore City
+mapview(MD) + mapview(BACI, zcol = 'popE') # layer mapview with "+"
+
+mapview(MD, alpha.region = 0, lwd = 2) + # makes polygon hollow, makes outline thicker
+  mapview(BACI, zcol = 'popE') 
+```
+
+# 2 data transformation
+
+```{r}
+
+# we have been looking at counts, but percentages are likely more useful
+BACI |> glimpse()
+
+# create new variables with mutate
+BACI <- 
+  BACI |> 
+  mutate(
+      pct_white = 100*(whiteE / popE)
+    , pct_black = 100*(blackE / popE)
+    , pct_aian  = 100*(aianE  / popE)
+    , pct_asian = 100*(asianE / popE)
+    , pct_native= 100*(nativeE/ popE)
+    , pct_other = 100*(otherE / popE)
+    )
+
+# double check new columns
+BACI |> glimpse()
+
+# multiple ggplot maps, but first make long-format with pivot
+(
+  BACI_long <- 
+    BACI |> 
+    select(GEOID, starts_with('pct')) |> # geometry is "sticky"
+    pivot_longer(-c(GEOID, geometry))
+  )
+  
+
+BACI_long |> 
+  ggplot() + # the same as above
+  geom_sf(aes(fill = value)) +
+  facet_wrap(~name) +
+  theme_bw(16) +
+  scale_fill_viridis_c(option = 'C') + 
+  NULL
+
+BACI |> mapview(zcol = 'pct_black')
+
+m1 <- BACI |> mapview(zcol = 'pct_black')
+m2 <- BACI |> mapview(zcol = 'pct_white')
+
+sync(m1, m2)
+
+
+m1 <- BACI |> mapview(zcol = 'pct_black', layer.name = "Black (%)") # clean up the labeling
+m2 <- BACI |> mapview(zcol = 'pct_white', layer.name = "White (%)")
+
+sync(m1, m2)
+
+# a-spatial data viz
+BACI |> 
+  ggplot(aes(pct_black, pct_white)) +
+  geom_point() +
+  # geom_smooth() + # adds a best-fitting line
+  theme_bw(16) +
+  NULL
+
+```
+
+# end
