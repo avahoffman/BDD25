@@ -2,6 +2,6 @@
 title: "About"
 ---
 
-This content was created by [Dexter Locke](https://github.com/DHLocke) and [Ava Hoffman](https://github.com/avahoffman) for [Baltimore Data Day 2024](https://bniajfi.org/data_day/).
+This content was created by [Ava Hoffman](https://github.com/avahoffman) for [Baltimore Data Day 2025](https://bniajfi.org/data_day/).
 
-You can find the source files for this Workshop at <https://github.com/avahoffman/BDD24>.
+You can find the source files for this Workshop at <https://github.com/avahoffman/BDD25>.
