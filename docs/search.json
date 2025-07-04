@@ -2,7 +2,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Baltimore Data Day 2024",
+    "title": "Baltimore Data Day 2025",
     "section": "",
     "text": "This activity is meant to guide you through some R fundamentals so you can get started on your data journey!"
   },
@@ -72,14 +72,14 @@
   {
     "objectID": "index.html#installing-r-and-rstudio",
     "href": "index.html#installing-r-and-rstudio",
-    "title": "Baltimore Data Day 2024",
+    "title": "Baltimore Data Day 2025",
     "section": "Installing R and RStudio",
     "text": "Installing R and RStudio\nYou will need to install R. RStudio is a development environment for running R. It comes with a lot of cool features.\n\nDownload and Install R.\nDownlaod and Install RStudio.\n\nIf you work on a Windows machine, you might also need to install R Tools."
   },
   {
     "objectID": "index.html#navigate-rstudio",
     "href": "index.html#navigate-rstudio",
-    "title": "Baltimore Data Day 2024",
+    "title": "Baltimore Data Day 2025",
     "section": "Navigate RStudio",
     "text": "Navigate RStudio\nLocate the following in RStudio:\n\nConsole. This is where code is run.\nEnvironment. This shows you objects R can work with.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRead more about the RStudio user interface here."
   },
@@ -135,7 +135,7 @@
   {
     "objectID": "index.html#organize-your-files",
     "href": "index.html#organize-your-files",
-    "title": "Baltimore Data Day 2024",
+    "title": "Baltimore Data Day 2025",
     "section": "Organize your files",
     "text": "Organize your files\nWe will create an “R Project” to stay organized. You can create many more later.\n\nGo to File &gt; New Project…\nSelect “New Directory”.\nSelect “New Project”.\nProvide a Directory name, such as “Intro to R”.\nPick a reasonable location, such as your Documents folder."
   },
@@ -156,7 +156,7 @@
   {
     "objectID": "index.html#intro-to-r-activity",
     "href": "index.html#intro-to-r-activity",
-    "title": "Baltimore Data Day 2024",
+    "title": "Baltimore Data Day 2025",
     "section": "Intro to R Activity",
     "text": "Intro to R Activity\nNow we will transition to the activities, which are actually in the code files!\n\nDownload This file.\nDownload This BNIA data about library cards. (source)\nMove the downloaded files to the directory you created above.\nOpen BDD.Rmd in RStudio (File &gt; Open File or simply double-click)."
   },
